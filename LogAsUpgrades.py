@@ -32,14 +32,14 @@ fileNames = []
 fileNames.append("ASAR-UpgradeIndex.xml")
 
 # Copy over the AS version independent upgrades index file
-os.system("copy %homedrive%\\BrAutomation\\AS\\Upgrades\\UpgradeIndex.xml  .\\Temp\\AsUpgrades\\" + fileNames[0]) # > nul
+os.system("echo AR && copy %homedrive%\\BrAutomation\\AS\\Upgrades\\UpgradeIndex.xml  .\\Temp\\AsUpgrades\\" + fileNames[0]) # > nul
 
 # Copy over AS version dependent upgrades index files
-for i in range(1,10):
+for i in range(1,12+1):
     sourceFile = "%homedrive%\\BrAutomation\\AS4" + str(i) + "\\Upgrades\\UpgradeIndex.xml"
     fileName = "AS4" + str(i) + "-UpgradeIndex.xml"
     fileNames.append(fileName)
-    os.system("copy " + sourceFile + " " + tempDir + "\\" + fileName)
+    os.system("echo AS4." + str(i) + "&& copy " + sourceFile + " " + tempDir + "\\" + fileName)
 
 # Create tables listing upgrades
 columnWidths = [8, 24, 12, 12, 36, 24]
