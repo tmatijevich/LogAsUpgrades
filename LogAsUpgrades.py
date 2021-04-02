@@ -1,12 +1,13 @@
-# List all installed upgrades for each version of Automation Studio
-# Date: 2020-03-06
-# Created by: Tyler Matijevich
+# File: LogAsUpgrades.py
+# Author: Tyler Matijevich
+# Created: 2020-03-06
+# Description: List all installed upgrades for each version of Automation Studio
 
 # Get time functions
 from time import localtime, strftime
 
 # Binary mode disables the conversion of line endings
-logFile = open("AsUpgrades_" + strftime("%Y-%m-%d_%H.%M.%S", localtime()) + ".log", "w")
+logFile = open("AsUpgradesLog_" + strftime("%Y-%m-%d_%H.%M.%S", localtime()) + ".txt", "w")
 
 # Write header
 logFile.write("=" * 80 + "\n")
@@ -34,7 +35,7 @@ fileNames.append("ASAR-UpgradeIndex.xml")
 os.system("copy %homedrive%\\BrAutomation\\AS\\Upgrades\\UpgradeIndex.xml  .\\Temp\\AsUpgrades\\" + fileNames[0]) # > nul
 
 # Copy over AS version dependent upgrades index files
-for i in range(1,8):
+for i in range(1,10):
     sourceFile = "%homedrive%\\BrAutomation\\AS4" + str(i) + "\\Upgrades\\UpgradeIndex.xml"
     fileName = "AS4" + str(i) + "-UpgradeIndex.xml"
     fileNames.append(fileName)
