@@ -1,7 +1,7 @@
 # Log Automation Studio Upgrades
 
 ## Usage
-On Windows, run (LogAsUpgrades.exe)[https://github.com/tmatijevich/LogAsUpgrades/releases/download/0.0.1/LogAsUpgrades.exe]. This will search for and list all Automation Studio upgrades installed.
+On Windows, run [LogAsUpgrades.exe](https://github.com/tmatijevich/LogAsUpgrades/releases/download/0.0.1/LogAsUpgrades.exe). This will search for and list all Automation Studio upgrades installed.
 
 Alternatively with Python, clone this repository and run:
 
